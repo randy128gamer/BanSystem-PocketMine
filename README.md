@@ -1,3 +1,3 @@
 # BanSystem
 
-A BanSystem which allows you to ban/mute/block players/IP addresses, and kick players.
+A ban system that allows to temporarily/permanently ban/mute/block and kick players/IP address.
