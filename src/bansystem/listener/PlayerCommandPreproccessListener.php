@@ -24,7 +24,7 @@ class PlayerCommandPreproccessListener implements Listener {
             $entry = $entries[strtolower($player->getName())];
             if ($entry->getExpires() == null) {
                 $reason = $entry->getReason();
-                if ($reason != null && $reason != "") {
+                if ($reason != null || $reason != "") {
                     $blockMessage = TextFormat::RED . "You're currently blocked for " . TextFormat::AQUA . $reason . TextFormat::RED . ".";
                 } else {
                     $blockMessage = TextFormat::RED . "You're currently blocked.";
@@ -36,7 +36,7 @@ class PlayerCommandPreproccessListener implements Listener {
                     return;
                 }
                 $blockReason = $entry->getReason();
-                if ($blockReason != null && $blockReason != "") {
+                if ($blockReason != null || $blockReason != "") {
                     $blockReason = TextFormat::RED . "You're currently blocked for " . TextFormat::AQUA . $blockReason . TextFormat::RED . " until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
                 } else {
                     $blockReason = TextFormat::RED . "You're currently blocked until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
@@ -60,7 +60,7 @@ class PlayerCommandPreproccessListener implements Listener {
             $entry = $entries[strtolower($player->getAddress())];
             if ($entry->getExpires() == null) {
                 $reason = $entry->getReason();
-                if ($reason != null && $reason != "") {
+                if ($reason != null || $reason != "") {
                     $blockMessage = TextFormat::RED . "You're currently IP blocked for " . TextFormat::AQUA . $reason . TextFormat::RED . ".";
                 } else {
                     $blockMessage = TextFormat::RED . "You're currently IP blocked.";
@@ -72,7 +72,7 @@ class PlayerCommandPreproccessListener implements Listener {
                     return;
                 }
                 $blockReason = $entry->getReason();
-                if ($blockReason != null && $blockReason != "") {
+                if ($blockReason != null || $blockReason != "") {
                     $blockReason = TextFormat::RED . "You're currently IP blocked for " . TextFormat::AQUA . $blockReason . TextFormat::RED . " until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
                 } else {
                     $blockReason = TextFormat::RED . "You're currently IP blocked until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";

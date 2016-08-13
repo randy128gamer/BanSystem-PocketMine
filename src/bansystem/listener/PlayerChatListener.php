@@ -20,7 +20,7 @@ class PlayerChatListener implements Listener {
             $muteMessage = "";
             if ($entry->getExpires() == null) {
                 $reason = $entry->getReason();
-                if ($reason != null && $reason != "") {
+                if ($reason != null || $reason != "") {
                     $muteMessage = TextFormat::RED . "You are currently muted for " . TextFormat::AQUA . $reason . TextFormat::RED . ".";
                 } else {
                     $muteMessage = TextFormat::RED . "You are currently muted.";
@@ -32,7 +32,7 @@ class PlayerChatListener implements Listener {
                     return;
                 }
                 $muteReason = $entry->getReason();
-                if ($muteReason != null && $muteReason != "") {
+                if ($muteReason != null || $muteReason != "") {
                     $muteMessage = TextFormat::RED . "You are currently muted for " . TextFormat::AQUA . $reason . TextFormat::RED . " until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
                 } else {
                     $muteMessage = TextFormat::RED . "You are currently muted until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
@@ -52,7 +52,7 @@ class PlayerChatListener implements Listener {
             $muteMessage = "";
             if ($entry->getExpires() == null) {
                 $reason = $entry->getReason();
-                if ($reason != null && $reason != "") {
+                if ($reason != null || $reason != "") {
                     $muteMessage = TextFormat::RED . "You are currently IP muted for " . TextFormat::AQUA . $reason . TextFormat::RED . ".";
                 } else {
                     $muteMessage = TextFormat::RED . "You are currently IP muted.";
@@ -64,7 +64,7 @@ class PlayerChatListener implements Listener {
                     return;
                 }
                 $muteReason = $entry->getReason();
-                if ($muteReason != null && $muteReason != "") {
+                if ($muteReason != null || $muteReason != "") {
                     $muteMessage = TextFormat::RED . "You are currently IP muted for " . TextFormat::AQUA . $muteReason . TextFormat::RED . " until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
                 } else {
                     $muteMessage = TextFormat::RED . "You are currently IP muted until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";

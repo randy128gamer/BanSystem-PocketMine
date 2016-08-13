@@ -19,7 +19,7 @@ class PlayerPreLoginListener implements Listener {
             $entry = $banEntry[strtolower($player->getName())];
             if ($entry->getExpires() == null) {
                 $reason = $entry->getReason();
-                if ($reason != null && $reason != "") {
+                if ($reason != null || $reason != "") {
                     $kickMessage = TextFormat::RED . "You are currently banned for " . TextFormat::AQUA . $reason . TextFormat::RED . ".";
                 } else {
                     $kickMessage = TextFormat::RED . "You are currently banned.";
@@ -31,7 +31,7 @@ class PlayerPreLoginListener implements Listener {
                     return;
                 }
                 $banReason = $entry->getReason();
-                if ($banReason != null && $banReason != "") {
+                if ($banReason != null || $banReason != "") {
                     $kickMessage = TextFormat::RED . "You are currently banned for " . TextFormat::AQUA . $banReason . TextFormat::RED . " until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
                 } else {
                     $kickMessage = TextFormat::RED . "You are currently banned until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
@@ -50,7 +50,7 @@ class PlayerPreLoginListener implements Listener {
             $entry = $banEntry[strtolower($player->getAddress())];
             if ($entry->getExpires() == null) {
                 $reason = $entry->getReason();
-                if ($reason != null && $reason != "") {
+                if ($reason != null || $reason != "") {
                     $kickMessage = TextFormat::RED . "You are currently IP banned for " . TextFormat::AQUA . $reason . TextFormat::RED . ".";
                 } else {
                     $kickMessage = TextFormat::RED . "You are currently IP banned.";
@@ -62,7 +62,7 @@ class PlayerPreLoginListener implements Listener {
                     return;
                 }
                 $banReason = $entry->getReason();
-                if ($banReason != null && $banReason != "") {
+                if ($banReason != null || $banReason != "") {
                     $kickMessage = TextFormat::RED . "You are currently IP banned for " . TextFormat::AQUA . $banReason . TextFormat::RED . " until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
                 } else {
                     $kickMessage = TextFormat::RED . "You are currently IP banned until " . TextFormat::AQUA . $expiry . TextFormat::RED . ".";
