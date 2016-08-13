@@ -14,6 +14,10 @@ class PlayerCommandPreproccessListener implements Listener {
     public function onPlayerCommandPreproccess(PlayerCommandPreprocessEvent $event) {
         $player = $event->getPlayer();
         $blockList = Manager::getNameBlocks();
+        $str = str_split($event->getMessage());
+        if ($str[0] != "/") {
+            return;
+        }
         if ($blockList->isBanned($player->getName())) {
             $blockMessage = "";
             $entries = $blockList->getEntries();
@@ -46,6 +50,10 @@ class PlayerCommandPreproccessListener implements Listener {
     public function onPlayerCommandPreproccess2(PlayerCommandPreprocessEvent $event) {
         $player = $event->getPlayer();
         $blockList = Manager::getIPBlocks();
+        $str = str_split($event->getMessage());
+        if ($str[0] != "/") {
+            return;
+        }
         if ($blockList->isBanned($player->getAddress())) {
             $blockMessage = "";
             $entries = $blockList->getEntries();

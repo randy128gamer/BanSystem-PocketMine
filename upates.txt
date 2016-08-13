@@ -1,6 +1,15 @@
 Updates:
 
 -------------------------------------------------
+1.0.1
+
+- Bug fixes.
+    - Chat was cancelled when player is blocked.
+    - Fixed temporary block message.
+
+
+-------------------------------------------------
+-------------------------------------------------
 1.0.0
 
 - Added /ban <player> [reason...] command.
