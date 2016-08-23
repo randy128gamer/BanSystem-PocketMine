@@ -55,8 +55,8 @@ class BanIPCommand extends Command {
                 }
                 $reason = substr($reason, 0, strlen($reason) - 1);
                 if ($ip != null) {
+                    $sender->getServer()->getIPBans()->addBan($ip, $reason, null, $sender->getName());
                     foreach ($sender->getServer()->getOnlinePlayers() as $players) {
-                        $banList->addBan($ip, $reason, null, $sender->getName());   
                         if ($players->getAddress() == $ip) {
                             $players->kick(TextFormat::RED . "You have been IP banned for " . TextFormat::AQUA . $reason . TextFormat::RED . ".", false);
                         }

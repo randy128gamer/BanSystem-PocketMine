@@ -1,7 +1,7 @@
 
 name: BanSystem
 main: bansystem\BanSystem
-version: 1.0.1
+version: 1.0.2
 author: xXSuperFrostyXx, randy128gamer
 api: [2.0.0, 2.1.0, 2.2.0, 2.3.0, 2.4.0]
 description: A ban system that allows to temporarily/permanently ban/mute/block and kick players/IP address.
