@@ -1,5 +1,17 @@
 Updates:
 -------------------------------------------------
+1.0.3
+
+- Bug fixes:
+    - /block command fixed. (Command not working when running this command.)
+    - /block-ip command fixed. (Command not working when running this command.)
+    - /tempblock command fixed. (Command not working when running this command.)
+    - /tempblock-ip command fixed. (Command not working when running this command.)
+    - /unblock command fixed. (Command not working when running this command.)
+    - /unblock-ip command fixed. (Command not working when running this command.)
+
+-------------------------------------------------
+-------------------------------------------------
 1.0.2
 
 - Bug fixes:

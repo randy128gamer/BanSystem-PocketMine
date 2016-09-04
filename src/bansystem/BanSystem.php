@@ -5,6 +5,8 @@ namespace bansystem;
 use bansystem\command\BanCommand;
 use bansystem\command\BanIPCommand;
 use bansystem\command\BanListCommand;
+use bansystem\command\BlockCommand;
+use bansystem\command\BlockIPCommand;
 use bansystem\command\BlockListCommand;
 use bansystem\command\KickCommand;
 use bansystem\command\MuteCommand;
@@ -14,10 +16,14 @@ use bansystem\command\PardonCommand;
 use bansystem\command\PardonIPCommand;
 use bansystem\command\TempBanCommand;
 use bansystem\command\TempBanIPCommand;
+use bansystem\command\TempBlockCommand;
+use bansystem\command\TempBlockIPCommand;
 use bansystem\command\TempMuteCommand;
 use bansystem\command\TempMuteIPCommand;
 use bansystem\command\UnbanCommand;
 use bansystem\command\UnbanIPCommand;
+use bansystem\command\UnblockCommand;
+use bansystem\command\UnblockIPCommand;
 use bansystem\command\UnmuteCommand;
 use bansystem\command\UnmuteIPCommand;
 use bansystem\listener\PlayerChatListener;
@@ -50,6 +56,8 @@ class BanSystem extends PluginBase {
             new BanCommand(),
             new BanIPCommand(),
             new BanListCommand(),
+            new BlockCommand(),
+            new BlockIPCommand(),
             new BlockListCommand(),
             new KickCommand(),
             new MuteCommand(),
@@ -59,10 +67,14 @@ class BanSystem extends PluginBase {
             new PardonIPCommand(),
             new TempBanCommand(),
             new TempBanIPCommand(),
+            new TempBlockCommand(),
+            new TempBlockIPCommand(),
             new TempMuteCommand(),
             new TempMuteIPCommand(),
             new UnbanCommand(),
             new UnbanIPCommand(),
+            new UnblockCommand(),
+            new UnblockIPCommand(),
             new UnmuteCommand(),
             new UnmuteIPCommand()
         ));
