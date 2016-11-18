@@ -34,7 +34,7 @@ class KickCommand extends Command {
                 if ($player != null) {
                     $reason = "";
                     for ($i = 1; $i < count($args); $i++) {
-                        $reason .= $reason[$i];
+                        $reason .= $args[$i];
                         $reason .= " ";
                     }
                     $reason = substr($reason, 0, strlen($reason) - 1);
