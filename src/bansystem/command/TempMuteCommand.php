@@ -54,7 +54,7 @@ class TempMuteCommand extends Command {
                     if ($player != null) {
                         $muteList->addBan($player->getName(), $reason, $expiry->getDate(), $sender->getName());
                         $sender->getServer()->broadcastMessage(TextFormat::AQUA . $player->getName() . TextFormat::RED . " has been muted for " . TextFormat::AQUA . $reason . " until " . TextFormat::AQUA . $expiryToString . TextFormat::RED . ".");
-                        $player->sendMessage(TextFormat::RED . "You have been muted for " . TextFormat::AQUA . $reason . TextFormat::REDd . " until " . TextFormat::AQUA . $expiryToString . TextFormat::RED . ".");
+                        $player->sendMessage(TextFormat::RED . "You have been muted for " . TextFormat::AQUA . $reason . TextFormat::RED . " until " . TextFormat::AQUA . $expiryToString . TextFormat::RED . ".");
                     } else {
                         $muteList->addBan($args[0], $reason, $expiry->getDate(), $sender->getName());
                         $sender->getServer()->broadcastMessage(TextFormat::AQUA . $args[0] . TextFormat::RED . " has been muted for " . TextFormat::AQUA . $reason . TextFormat::RED . " until " . TextFormat::AQUA . $expiryToString . TextFormat::RED . ".");
