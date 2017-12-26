@@ -20,7 +20,7 @@ class TempMuteCommand extends Command {
         $this->setPermission("bansystem.command.tempmute");
     }
     
-    public function execute(CommandSender $sender, $commandLabel, array $args) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) {
         if ($this->testPermissionSilent($sender)) {
             if (count($args) <= 1) {
                 $sender->sendMessage(Translation::translateParams("usage", array($this)));

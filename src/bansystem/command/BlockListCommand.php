@@ -40,7 +40,7 @@ class BlockListCommand extends Command {
         return $array;
     }
     
-    public function execute(CommandSender $sender, $commandLabel, array $args) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) {
         if ($this->testPermission($sender)) {
             if (count($args) <= 0) {
                 $sender->sendMessage(Translation::translateParams("usage", array($this)));
