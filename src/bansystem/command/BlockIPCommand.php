@@ -17,7 +17,7 @@ class BlockIPCommand extends Command {
         $this->setPermission("bansystem.command.blockip");
     }
     
-    public function execute(CommandSender $sender, $commandLabel, array $args) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) {
         if ($this->testPermissionSilent($sender)) {
             if (count($args) <= 0) {
                 $sender->sendMessage(Translation::translateParams("usage", array($this)));
