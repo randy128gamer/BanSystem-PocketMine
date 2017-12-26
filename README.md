@@ -1,1 +1,1 @@
-[BanSystem-Legacy](https://i.imgur.com/utkG6Ed.png)
+![BanSystem-Legacy](https://i.imgur.com/utkG6Ed.png)
